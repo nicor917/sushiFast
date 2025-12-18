@@ -1,0 +1,262 @@
+/* ===== APP SPECIFIC STYLES ===== */
+
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== LOGO ANIMATIONS ===== */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter, transform;
+  transition: filter 300ms, transform 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(233, 69, 96, 0.6));
+  transform: scale(1.1);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(15, 155, 142, 0.6));
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* ===== CARD ENHANCEMENTS ===== */
+.card {
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Image wrapper for zoom effect */
+.card .img-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.card .img-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(26, 26, 46, 0.3)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .img-wrapper::after {
+  opacity: 1;
+}
+
+/* ===== DOCUMENTATION LINK ===== */
+.read-the-docs {
+  color: #888;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.read-the-docs:hover {
+  color: #e94560;
+}
+
+/* ===== MAIN CONTENT AREA ===== */
+.px-4.py-4.w-100 {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== ROW ANIMATIONS ===== */
+.row {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== DECORATIVE ELEMENTS ===== */
+.decoration-circle {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.decoration-circle.top-right {
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(233, 69, 96, 0.1), transparent);
+}
+
+.decoration-circle.bottom-left {
+  bottom: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(15, 155, 142, 0.1), transparent);
+}
+
+/* ===== EMOJI ANIMATION IN BRAND ===== */
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ===== PAGE TITLE ENHANCEMENTS ===== */
+.mt-3 > h2:first-child,
+h2.mb-4 {
+  background: linear-gradient(135deg, #1a1a2e, #e94560);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== FILTER BUTTONS CONTAINER ===== */
+.d-flex.gap-2.mb-4.flex-wrap {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== MENU DETAILS PAGE ===== */
+.menu-details-container {
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== PRICE DISPLAY ===== */
+.price-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #e94560, #ff6b6b);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+/* ===== BADGE STYLES ===== */
+.badge-saveur {
+  display: inline-block;
+  background: linear-gradient(135deg, #0f9b8e, #14b8a6);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  margin: 0.2rem;
+  transition: transform 0.2s ease;
+}
+
+.badge-saveur:hover {
+  transform: scale(1.1);
+}
+
+/* ===== TOOLTIP STYLES ===== */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px);
+  background: #1a1a2e;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  #root {
+    padding: 0;
+  }
+  
+  .d-flex.gap-2.mb-4.flex-wrap {
+    padding: 0.75rem;
+  }
+}
+
+/* ===== SMOOTH PAGE TRANSITIONS ===== */
+.page-wrapper {
+  animation: pageEnter 0.4s ease-out;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

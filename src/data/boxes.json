@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "nom": "California Saumon Avocat",
+    "pieces": 12,
+    "prix": 9.90,
+    "image": "/images/california-dream.jpg",
+    "saveurs": ["avocat", "saumon"],
+    "aliments": [
+      { "nom": "saumon", "quantite": "80g" },
+      { "nom": "avocat", "quantite": "50g" }
+    ]
+  },
+   {
+    "id": 2,
+    "nom": "Amateur-mix",
+    "pieces": 12,
+    "prix": 9.90,
+    "image": "/images/amateur-mix.jpg",
+    "saveurs": ["avocat", "saumon"],
+    "aliments": [
+      { "nom": "saumon", "quantite": "80g" },
+      { "nom": "avocat", "quantite": "50g" }
+    ]
+  },
+     {
+    "id": 3,
+    "nom": "Fresh-Mix",
+    "pieces": 12,
+    "prix": 9.90,
+    "image": "/images/fresh-mix.jpg",
+    "saveurs": ["avocat", "saumon"],
+    "aliments": [
+      { "nom": "saumon", "quantite": "80g" },
+      { "nom": "avocat", "quantite": "50g" }
+    ]
+  },
+       {
+    "id": 4,
+    "nom": "Gourmet-mix",
+    "pieces": 12,
+    "prix": 9.90,
+    "image": "/images/gourmet-mix.jpg",
+    "saveurs": ["avocat", "saumon"],
+    "aliments": [
+      { "nom": "saumon", "quantite": "80g" },
+      { "nom": "avocat", "quantite": "50g" }
+    ]
+  },
+         {
+    "id": 5,
+    "nom": "Master-mix",
+    "pieces": 12,
+    "prix": 9.90,
+    "image": "/images/master-mix.jpg",
+    "saveurs": ["avocat", "saumon"],
+    "aliments": [
+      { "nom": "saumon", "quantite": "80g" },
+      { "nom": "avocat", "quantite": "50g" }
+    ]
+  },
+           {
+    "id": 6,
+    "nom": "Salmon-Classic",
+    "pieces": 12,
+    "prix": 9.90,
+    "image": "/images/salmon-classic.jpg",
+    "saveurs": ["saumon"],
+    "aliments": [
+      { "nom": "saumon", "quantite": "80g" }
+    ]
+  },
+             {
+    "id": 7,
+    "nom": "Salmon-Lovers",
+    "pieces": 12,
+    "prix": 9.90,
+    "image": "/images/salmon-lovers.jpg",
+    "saveurs": ["saumon"],
+    "aliments": [
+      { "nom": "saumon", "quantite": "80g" }
+    ]
+  },
+             {
+    "id": 8,
+    "nom": "Salmon-Original",
+    "pieces": 12,
+    "prix": 9.90,
+    "image": "/images/salmon-original.jpg",
+    "saveurs": ["saumon"],
+    "aliments": [
+      { "nom": "saumon", "quantite": "80g" }
+    ]
+  },
+               {
+    "id": 9,
+    "nom": "Sando-Box-Chicken",
+    "pieces": 12,
+    "prix": 9.90,
+    "image": "/images/sando-box-chicken-katsu.jpg",
+    "saveurs": ["poulet", "saumon"],
+    "aliments": [
+      { "nom": "saumon", "quantite": "80g" },
+      { "nom": "poulet", "quantite": "50g" }
+    ]
+  }
+]
